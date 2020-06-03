@@ -42,9 +42,9 @@ mappings:
     name: "rucio_judge_expected_number_of_files"
     labels:
       dst_rse: "$1"   
-  - match: "rucio.judge.not_OK_rules.*"
+  - match: "rucio.not_OK_rules.*"
     help: "Rucio stuck rules"
-    name: "rucio_judge_not_OK_rules"
+    name: "rucio_not_OK_rules"
     labels:
       dst_rse: "$1"
   - match: "rucio.judge.replicating_rules.*"
@@ -67,15 +67,15 @@ mappings:
     name: "rucio_judge_free_space"
     labels:
       dst_rse: "$1"
-  - match: "rucio.requests.missing_data.*.*"
+  - match: "rucio.missing_data.*.*"
     help: "Rucio backlog volume"
-    name: "rucio_requests_missing_data_volume"
+    name: "rucio_missing_data_volume"
     labels:
       rse_type: "$1"
       dst_rse: "$2"
-  - match: "rucio.requests.replicating_data.*.*"
+  - match: "rucio.replicating_data.*.*"
     help: "Rucio replicating volume"
-    name: "rucio_requests_replicating_data_volume"
+    name: "rucio_replicating_data_volume"
     labels:
       rse_type: "$1"
       dst_rse: "$2"      
